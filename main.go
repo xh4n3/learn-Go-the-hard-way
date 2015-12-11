@@ -1,10 +1,40 @@
 package main
 
-import ()
+import (
+	"os"
+	"image"
+	"image/jpeg"
+	"image/draw"
+	"fmt"
+	"image/color"
+)
+
+func Coloring(img *image.NRGBA, x0 int, x1 int, y0 int, y1 int, set_color color.NRGBA) {
+	for  x:= x0; x < x1; x++ {
+		for y := y0; y < y1; y ++ {
+			img.Set(x, y, set_color)
+		}
+	}
+}
 
 func AddPhtoFrame() {
-	//TODO:user the res/gophergala.jpg to generate a image and write to res/m.jpg which is similar to like the logo in the README.md
-
+	fimage, _ := os.Open("res/gophergala.jpg")
+	defer fimage.Close()
+	img, _, _ := image.Decode(fimage)
+	w, h := img.Bounds().Max.X, img.Bounds().Max.Y
+	img2 := image.NewNRGBA(img.Bounds())
+	draw.Draw(img2, img2.Bounds(), img, image.Point{0,0}, draw.Src)
+	Coloring(img2, 0, w, 0, 100, color.NRGBA{255, 255, 0, 255})
+	Coloring(img2, 0, w, 100, 120, color.NRGBA{255, 0, 0, 255})
+	Coloring(img2, 0, w, h-120, h-100, color.NRGBA{255, 255, 0, 255})
+	Coloring(img2, 0, w, h-100, h, color.NRGBA{255, 0, 0, 255})
+	Coloring(img2, 0, 80, 0, h, color.NRGBA{0, 0, 255, 255})
+	Coloring(img2, 80, 100, 0, h, color.NRGBA{0, 255, 0, 255})
+	Coloring(img2, w-100, w-80, 0, h, color.NRGBA{0, 0, 255, 255})
+	Coloring(img2, w-80, w, 0, h, color.NRGBA{0, 255, 0, 255})
+	toimg, _ := os.Create("new.jpg")
+	defer toimg.Close()
+	jpeg.Encode(toimg, img2, &jpeg.Options{jpeg.DefaultQuality})
 }
 
 func main() {
