@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;learn-Go-the-hard-way&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../github.com" />
+      <root url="file://$PROJECT_DIR$/../../9fans.net" />
+      <root url="file://$PROJECT_DIR$/.." />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+      <root url="file://$PROJECT_DIR$/../../9fans.net/go/.git" />
+      <root url="file://$PROJECT_DIR$/../../github.com/golang/lint/.git" />
+      <root url="file://$PROJECT_DIR$/../../github.com/golang/lint/testdata" />
+      <root url="file://$PROJECT_DIR$/../../github.com/codahale/chacha20/.git" />
+      <root url="file://$PROJECT_DIR$/../tryout/.idea" />
+      <root url="file://$PROJECT_DIR$/../../github.com/shadowsocks/shadowsocks-go/.git" />
+      <root url="file://$PROJECT_DIR$/../../github.com/tools/godep/.git" />
+      <root url="file://$PROJECT_DIR$/.idea" />
+      <root url="file://$PROJECT_DIR$/../../github.com/kr/text/.git" />
+      <root url="file://$PROJECT_DIR$/../../github.com/shadowsocks/shadowsocks-go/shadowsocks/testdata" />
+      <root url="file://$PROJECT_DIR$/../../github.com/kr/pretty/.git" />
+      <root url="file://$PROJECT_DIR$/.git" />
+      <root url="file://$PROJECT_DIR$/../../github.com/tools/godep/Godeps/_workspace" />
+      <root url="file://$PROJECT_DIR$/../../github.com/rogpeppe/godef/go/printer/testdata" />
+      <root url="file://$PROJECT_DIR$/../../github.com/rogpeppe/godef/.git" />
+    </excluded>
+  </library>
+</component>
